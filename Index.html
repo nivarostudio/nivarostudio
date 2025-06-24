@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NivaroStudio | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f1115;
+      color: #e0e0e0;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Blob Backgrounds */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.4;
+      z-index: 0;
+    }
+
+    .blob1 {
+      width: 400px;
+      height: 400px;
+      background: #5f6caf;
+      top: -100px;
+      left: -100px;
+      animation: floatBlob 20s ease-in-out infinite alternate;
+    }
+
+    .blob2 {
+      width: 300px;
+      height: 300px;
+      background: #9b59b6;
+      bottom: -100px;
+      right: -80px;
+      animation: floatBlob 25s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatBlob {
+      from { transform: translateY(0px); }
+      to { transform: translateY(-50px) translateX(30px); }
+    }
+
+    header, section, footer {
+      position: relative;
+      z-index: 2;
+    }
+
+    header {
+      padding: 80px 20px 40px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #ffffff;
+      animation: fadeInDown 1s ease;
+    }
+
+    p.subtitle {
+      font-size: 1.1rem;
+      margin-top: 10px;
+      color: #9fa2a9;
+      animation: fadeInDown 1.2s ease;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      animation: fadeUp 1s ease;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ced2db;
+      position: relative;
+    }
+
+    section h2::after {
+      content: "";
+      width: 60px;
+      height: 3px;
+      background: #72aee6;
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      padding: 5px 0;
+      color: #aeb3bb;
+    }
+
+    .project {
+      margin-bottom: 40px;
+      background: rgba(26, 29, 35, 0.7);
+      border-radius: 16px;
+      padding: 20px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px) scale(1.01);
+    }
+
+    .project h3 {
+      font-size: 1.4rem;
+      color: #d1d7e0;
+      margin-bottom: 10px;
+    }
+
+    .project img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      color: #aeb3bb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #6d737c;
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: #72aee6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+
+  <header>
+    <h1>NivaroStudio</h1>
+    <p class="subtitle">Creative & melancholic brand identity design</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm Nehal, the mind behind NivaroStudio — where strategy meets art. I design thoughtful, minimal, and emotionally-resonant brand identities for creators, startups, and solo founders. Currently focused on freelance design and growing as a brand specialist.</p>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <ul>
+      <li>Logo & Visual Identity Design</li>
+      <li>Brand Guidelines & Typography Systems</li>
+      <li>Instagram Kits & Social Post Templates</li>
+      <li>Business Cards & Brand Collateral</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <img src="images/flo.jpg" alt="FLO Skincare Project">
+      <h3>FLO Skincare</h3>
+      <p>Calm and minimalist branding for a clean skincare line. Includes logo, soft color palette, and packaging mockups.</p>
+    </div>
+    <div class="project">
+      <img src="images/bolt.jpg" alt="Bolt Creator Project">
+      <h3>Bolt Creator</h3>
+      <p>Dynamic identity for a fitness creator — red/black theme, monogram logo, and high-contrast templates for social media.</p>
+    </div>
+    <div class="project">
+      <img src="images/culture.jpg" alt="Culture Kitchen Project">
+      <h3>Culture Kitchen</h3>
+      <p>Bold and earthy identity for a food startup. Handcrafted logotype, social kits, and packaging mockups.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Let's build something timeless. Reach out for collaborations or commissions:</p>
+    <ul>
+      <li>Email: <a href="mailto:nivarostudio@gmail.com">nivarostudio@gmail.com</a></li>
+      <li>Instagram: <a href="https://instagram.com/nivarostudio" target="_blank">@nivarostudio</a></li>
+      <li>Telegram: <a href="https://t.me/nivarostudio" target="_blank">@nivarostudio</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 NivaroStudio. Designed with intention.
+  </footer>
+</body>
+</html>
