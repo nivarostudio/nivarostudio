@@ -14,31 +14,13 @@
       overflow-x: hidden;
       position: relative;
     }
-  @keyframes starTwinkle {
-  0% {
-    opacity: 0.9;
-    filter: drop-shadow(0 0 0.3px white) drop-shadow(0 0 1px white);
-  }
-  20% {
-    opacity: 1;
-    filter: drop-shadow(0 0 0.5px white) drop-shadow(0 0 2px white);
-  }
-  40% {
-    opacity: 0.8;
-    filter: drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.5px white);
-  }
-  60% {
-    opacity: 1;
-    filter: drop-shadow(0 0 0.4px white) drop-shadow(0 0 1.5px white);
-  }
-  80% {
-    opacity: 0.85;
-    filter: drop-shadow(0 0 0.3px white) drop-shadow(0 0 1px white);
-  }
-  100% {
-    opacity: 1;
-    filter: drop-shadow(0 0 0.5px white) drop-shadow(0 0 2px white);
-  }
+  @keyframes subtleFlicker {
+  0%   { filter: brightness(0) invert(1) drop-shadow(0 0 6px white) drop-shadow(0 0 12px white); opacity: 0.95; }
+  20%  { filter: brightness(0) invert(1) drop-shadow(0 0 7px white) drop-shadow(0 0 14px white); opacity: 1; }
+  40%  { filter: brightness(0) invert(1) drop-shadow(0 0 5px white) drop-shadow(0 0 10px white); opacity: 0.92; }
+  60%  { filter: brightness(0) invert(1) drop-shadow(0 0 6px white) drop-shadow(0 0 13px white); opacity: 0.97; }
+  80%  { filter: brightness(0) invert(1) drop-shadow(0 0 8px white) drop-shadow(0 0 16px white); opacity: 1; }
+  100% { filter: brightness(0) invert(1) drop-shadow(0 0 6px white) drop-shadow(0 0 12px white); opacity: 0.95; }
 }
     @media (max-width: 600px) {
   img {
@@ -200,12 +182,12 @@
   <header>
     <div style="text-align: center; margin-top: 0px; padding-top: 0px;">
   <img src="images/logo.png" alt="NivaroStudio Logo" style="
-    width: 300px;
-    margin-top: -10px;
-    padding-top: 0px;
-    filter: drop-shadow(0 0 1px white);
-    animation: starTwinkle 6s infinite ease-in-out alternate-reverse;
-  ">
+  width: 300px;
+  margin-top: -10px;
+  padding-top: 0px;
+  filter: brightness(0) invert(1) drop-shadow(0 0 6px white) drop-shadow(0 0 12px white) hue-rotate(10deg);
+  animation: subtleFlicker 3.5s infinite ease-in-out;
+">
 </div>
     <h1>NivaroStudio</h1>
     <p class="subtitle">Creative & melancholic brand identity design</p>
