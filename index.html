@@ -14,6 +14,17 @@
       overflow-x: hidden;
       position: relative;
     }
+    @keyframes pulseGlow {
+  0% {
+    filter: brightness(0) invert(1) drop-shadow(0 0 5px white) drop-shadow(0 0 15px white);
+  }
+  50% {
+    filter: brightness(0) invert(1) drop-shadow(0 0 10px white) drop-shadow(0 0 30px white);
+  }
+  100% {
+    filter: brightness(0) invert(1) drop-shadow(0 0 5px white) drop-shadow(0 0 15px white);
+  }
+}
 
     /* Blob Backgrounds */
     .blob {
@@ -167,6 +178,13 @@
   <div class="blob blob2"></div>
 
   <header>
+    <div style="text-align: center; margin-bottom: 10px;">
+  <img src="images/your-logo-file-name.png" alt="NivaroStudio Logo" style="
+    width: 100px;
+    filter: brightness(0) invert(1) drop-shadow(0 0 5px white) drop-shadow(0 0 15px white);
+    animation: pulseGlow 2s infinite;
+  ">
+</div>
     <h1>NivaroStudio</h1>
     <p class="subtitle">Creative & melancholic brand identity design</p>
   </header>
