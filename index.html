@@ -14,22 +14,37 @@
       overflow-x: hidden;
       position: relative;
     }
-    @keyframes pulseGlow {
+  @keyframes starTwinkle {
   0% {
-    filter: brightness(0) invert(1) drop-shadow(0 0 1.5px white) drop-shadow(0 0 3px white);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 0.3px white) drop-shadow(0 0 1px white);
   }
-  50% {
-    filter: brightness(0) invert(1) drop-shadow(0 0 3px white) drop-shadow(0 0 12px white);
+  20% {
+    opacity: 1;
+    filter: drop-shadow(0 0 0.5px white) drop-shadow(0 0 2px white);
+  }
+  40% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 0.2px white) drop-shadow(0 0 0.5px white);
+  }
+  60% {
+    opacity: 1;
+    filter: drop-shadow(0 0 0.4px white) drop-shadow(0 0 1.5px white);
+  }
+  80% {
+    opacity: 0.85;
+    filter: drop-shadow(0 0 0.3px white) drop-shadow(0 0 1px white);
   }
   100% {
-    filter: brightness(0) invert(1) drop-shadow(0 0 1.5px white) drop-shadow(0 0 3px white);
+    opacity: 1;
+    filter: drop-shadow(0 0 0.5px white) drop-shadow(0 0 2px white);
   }
-    }
+}
     @media (max-width: 600px) {
   img {
     width: 180px !important;
   }
-    }
+  
 
     /* Blob Backgrounds */
     .blob {
@@ -185,11 +200,11 @@
   <header>
     <div style="text-align: center; margin-top: 0px; padding-top: 0px;">
   <img src="images/logo.png" alt="NivaroStudio Logo" style="
-    width: 300px !important;
+    width: 300px;
     margin-top: -10px;
     padding-top: 0px;
-    filter: drop-shadow(0 0 1.5px white) drop-shadow(0 0 3px white);
-    animation: pulseGlow 2s infinite;
+    filter: drop-shadow(0 0 1px white);
+    animation: starTwinkle 6s infinite ease-in-out alternate-reverse;
   ">
 </div>
     <h1>NivaroStudio</h1>
