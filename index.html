@@ -14,27 +14,12 @@
       overflow-x: hidden;
       position: relative;
     }
-  @keyframes glowFlicker {
-  0% {
-    filter: brightness(0) invert(1) drop-shadow(0 0 4px white) drop-shadow(0 0 10px white);
+  @keyframes neonFlicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    filter: brightness(0) invert(1) drop-shadow(0 0 4px white) drop-shadow(0 0 12px white);
   }
-  15% {
-    filter: brightness(0) invert(1) drop-shadow(0 0 2px white) drop-shadow(0 0 5px white);
-  }
-  30% {
-    filter: brightness(0) invert(1) drop-shadow(0 0 6px white) drop-shadow(0 0 15px white);
-  }
-  45% {
-    filter: brightness(0) invert(1) drop-shadow(0 0 3px white) drop-shadow(0 0 8px white);
-  }
-  60% {
-    filter: brightness(0) invert(1) drop-shadow(0 0 5px white) drop-shadow(0 0 12px white);
-  }
-  75% {
+  20%, 22%, 24%, 55% {
     filter: brightness(0) invert(1) drop-shadow(0 0 1px white) drop-shadow(0 0 3px white);
-  }
-  100% {
-    filter: brightness(0) invert(1) drop-shadow(0 0 4px white) drop-shadow(0 0 10px white);
   }
 }
     @media (max-width: 600px) {
@@ -202,8 +187,8 @@
   height: auto;
   margin-top: -10px;
   padding-top: 0px;
-  filter: brightness(0) invert(1) drop-shadow(0 0 4px white) drop-shadow(0 0 10px white);
-  animation: glowFlicker 1.2s infinite;
+  filter: brightness(0) invert(1) drop-shadow(0 0 4px white) drop-shadow(0 0 12px white);
+  animation: neonFlicker 1.3s infinite;
   display: block;
   margin-left: auto;
   margin-right: auto;
