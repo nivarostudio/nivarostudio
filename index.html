@@ -58,17 +58,15 @@ h2, h3 {
   height: 2px;
   background: white;
   border-radius: 50%;
-  opacity: 0.2;
-  animation: sparkle 0.8s infinite alternate ease-in-out;
+  opacity: 0.1;
+  animation: sparkle var(--dur) infinite ease-in-out;
+  animation-delay: var(--delay);
   z-index: 0;
-  animation-delay: calc(var(--i) * 0.2s);
 }
 @keyframes sparkle {
-  0% { opacity: 0.1; transform: scale(1); }
-  25% { opacity: 0.6; transform: scale(1.2); }
-  50% { opacity: 0.3; transform: scale(1); }
-  75% { opacity: 0.7; transform: scale(1.3); }
-  100% { opacity: 0.2; transform: scale(0.9); }
+  0%   { opacity: 0.1; transform: scale(1); }
+  50%  { opacity: 0.7; transform: scale(1.3); }
+  100% { opacity: 0.2; transform: scale(1); }
 }
 
 @keyframes meshShift {
@@ -322,10 +320,15 @@ h2, h3 {
       star.classList.add("star");
       star.style.top = `${Math.random() * totalHeight}px`;
       star.style.left = `${Math.random() * window.innerWidth}px`;
-      star.style.setProperty('--i', Math.random().toFixed(2)); // Assign random delay multiplier
+
+      const delay = (Math.random() * 3).toFixed(2) + "s"; // up to 3s delay
+      const duration = (1 + Math.random() * 2).toFixed(2) + "s"; // between 1s–3s
+      star.style.setProperty('--delay', delay);
+      star.style.setProperty('--dur', duration);
+
       body.appendChild(star);
     }
   });
-  </script>
+</script>
 </body>
 </html>
