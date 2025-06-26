@@ -43,6 +43,17 @@ h2, h3 {
   opacity: 0.4;
   animation: meshShift 12s ease-in-out infinite alternate;
 }
+    body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image: radial-gradient(white 0.5px, transparent 0.5px);
+  background-size: 2px 2px;
+  opacity: 0.06;
+  animation: twinkle 8s infinite alternate;
+  pointer-events: none;
+    }
 
 @keyframes meshShift {
   0% { background-position: 0% 0%; }
@@ -206,6 +217,10 @@ h2, h3 {
     @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes twinkle {
+  0% { opacity: 0.04; }
+  100% { opacity: 0.08; }
     }
   </style>
 </head>
