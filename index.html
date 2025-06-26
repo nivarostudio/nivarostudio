@@ -32,12 +32,12 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: none;
-  filter: url(#noiseFilter);
-  opacity: 0.25;
+  background: url('https://grainy-gradients.vercel.app/noise.svg') repeat;
+  background-size: 300px 300px;
+  opacity: 0.08;
   z-index: 1;
   pointer-events: none;
-  animation: grainMotion 4s linear infinite;
+  animation: grainMotion 1.5s infinite linear;
 }
   @keyframes neonFlicker {
   0%, 20%, 22%, 24%, 55%, 100% {
