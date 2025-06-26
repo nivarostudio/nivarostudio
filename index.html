@@ -27,6 +27,20 @@ h2, h3 {
   font-family: 'Unica One', sans-serif;
   letter-spacing: 1px;
 }
+    /* Add subtle gradient + noise texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: 
+    linear-gradient(145deg, #0f1115, #1a1c22),
+    url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+  background-blend-mode: overlay;
+  background-size: 300px 300px;
+  opacity: 0.08;
+  z-index: 0;
+  pointer-events: none;
+}
   @keyframes neonFlicker {
   0%, 20%, 22%, 24%, 55%, 100% {
     filter: brightness(0) invert(1) drop-shadow(0 0 3px white) drop-shadow(0 0 10px white);
