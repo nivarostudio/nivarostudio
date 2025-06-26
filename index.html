@@ -27,18 +27,6 @@ h2, h3 {
   font-family: 'Unica One', sans-serif;
   letter-spacing: 1px;
 }
-        /* Noise overlay using SVG filter */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: url('https://grainy-gradients.vercel.app/noise.svg') repeat;
-  background-size: 300px 300px;
-  opacity: 0.08;
-  z-index: 1;
-  pointer-events: none;
-  animation: grainMotion 1.5s infinite linear;
-}
   @keyframes neonFlicker {
   0%, 20%, 22%, 24%, 55%, 100% {
     filter: brightness(0) invert(1) drop-shadow(0 0 3px white) drop-shadow(0 0 10px white);
@@ -197,18 +185,9 @@ body::before {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    @keyframes grainMotion {
-  0% { background-position: 0 0; }
-  100% { background-position: 100px 100px; }
-    }
   </style>
 </head>
 <body>
-  <svg width="0" height="0" style="position:absolute">
-  <filter id="noiseFilter">
-    <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch" />
-  </filter>
-  </svg>
   <div class="blob blob1"></div>
   <div class="blob blob2"></div>
 
