@@ -47,13 +47,26 @@ h2, h3 {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: 3;
-  background-image: radial-gradient(white 0.7px, transparent 0.7px);
-  background-size: 3px 3px;
-  opacity: 0.07;
-  animation: twinkle 10s infinite alternate;
+  z-index: 0;
   pointer-events: none;
-    }
+  background: transparent;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: sparkle 2s infinite ease-in-out alternate;
+  z-index: 0;
+}
+
+@keyframes sparkle {
+  from { opacity: 0.1; transform: scale(1); }
+  to { opacity: 0.6; transform: scale(1.4); }
+}
 
 @keyframes meshShift {
   0% { background-position: 0% 0%; }
@@ -218,10 +231,6 @@ h2, h3 {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    @keyframes twinkle {
-  0% { opacity: 0.04; }
-  100% { opacity: 0.08; }
-    }
   </style>
 </head>
 <body>
@@ -294,5 +303,16 @@ h2, h3 {
   <footer>
     © 2025 NivaroStudio. Designed with intention.
   </footer>
+  <script>
+  const starCount = 80; // You can increase or decrease this
+  for (let i = 0; i < starCount; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.top = `${Math.random() * 100}vh`;
+    star.style.left = `${Math.random() * 100}vw`;
+    star.style.animationDelay = `${Math.random() * 5}s`;
+    document.body.appendChild(star);
+  }
+  </script>
 </body>
 </html>
