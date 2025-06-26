@@ -304,15 +304,25 @@ h2, h3 {
     © 2025 NivaroStudio. Designed with intention.
   </footer>
   <script>
-  const starCount = 80; // You can increase or decrease this
-  for (let i = 0; i < starCount; i++) {
-    const star = document.createElement('div');
-    star.className = 'star';
-    star.style.top = `${Math.random() * 100}vh`;
-    star.style.left = `${Math.random() * 100}vw`;
-    star.style.animationDelay = `${Math.random() * 5}s`;
-    document.body.appendChild(star);
-  }
-  </script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const starCount = 150;
+    const body = document.body;
+    const totalHeight = Math.max(
+      body.scrollHeight, body.offsetHeight,
+      document.documentElement.clientHeight,
+      document.documentElement.scrollHeight,
+      document.documentElement.offsetHeight
+    );
+
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement("div");
+      star.classList.add("star");
+      star.style.top = `${Math.random() * totalHeight}px`;
+      star.style.left = `${Math.random() * window.innerWidth}px`;
+      star.style.animationDelay = `${Math.random() * 5}s`;
+      body.appendChild(star);
+    }
+  });
+</script>
 </body>
 </html>
