@@ -27,6 +27,18 @@ h2, h3 {
   font-family: 'Unica One', sans-serif;
   letter-spacing: 1px;
 }
+        /* Noise overlay using SVG filter */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: none;
+  filter: url(#noiseFilter);
+  opacity: 0.04;
+  z-index: 1;
+  pointer-events: none;
+  animation: grainMotion 4s linear infinite;
+}
   @keyframes neonFlicker {
   0%, 20%, 22%, 24%, 55%, 100% {
     filter: brightness(0) invert(1) drop-shadow(0 0 3px white) drop-shadow(0 0 10px white);
@@ -40,20 +52,7 @@ h2, h3 {
     width: 180px !important;
   }
     }
-    /* Noise overlay using SVG filter */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: none;
-  filter: url(#noiseFilter);
-  opacity: 0.04;
-  z-index: 1;
-  pointer-events: none;
-}
-  
-
-    /* Blob Backgrounds */
+ /* Blob Backgrounds */
     .blob {
       position: absolute;
       border-radius: 50%;
@@ -197,6 +196,10 @@ body::before {
     @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes grainMotion {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
     }
   </style>
 </head>
