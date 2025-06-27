@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | NivaroStudio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset & basics */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #3a3a3a 0%, #1f1f1f 100%);
+      color: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .contact-wrapper {
+      background: rgba(25, 25, 25, 0.85);
+      max-width: 400px;
+      width: 100%;
+      padding: 40px 35px;
+      border-radius: 14px;
+      box-shadow:
+        inset 0 0 60px 20px rgba(70, 70, 70, 0.15),
+        0 10px 30px rgba(0,0,0,0.7);
+    }
+
+    h1 {
+      margin-bottom: 12px;
+      font-weight: 600;
+      font-size: 1.9rem;
+      color: #eee;
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 30px;
+      font-size: 1rem;
+      font-weight: 400;
+      text-align: center;
+      color: #aaa;
+      line-height: 1.4;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #bbb;
+      margin-top: 18px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      background: #2e2e2e;
+      border: none;
+      border-radius: 10px;
+      padding: 13px 18px;
+      font-size: 1rem;
+      color: #eee;
+      transition: box-shadow 0.3s ease;
+      resize: none;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none;
+      box-shadow: 0 0 14px 3px #6e48aa;
+      animation: glowPulse 2s infinite;
+    }
+
+    button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 15px 0;
+      background: #6e48aa;
+      border: none;
+      border-radius: 10px;
+      color: #eee;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 0 8px #6e48aa;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      background: #8159c9;
+      box-shadow: 0 0 18px 5px #8159c9;
+      animation: glowPulse 1.5s infinite;
+    }
+
+    @keyframes glowPulse {
+      0%, 100% {
+        box-shadow: 0 0 14px 3px #6e48aa;
+      }
+      50% {
+        box-shadow: 0 0 24px 7px #6e48aa;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-wrapper">
+    <h1>Get in Touch</h1>
+    <p>Have a project or just wanna say hi? Drop your details below — I’m all about bringing ideas to life.</p>
+
+    <form id="contactForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Tell me about your vision..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = encodeURIComponent(this.name.value.trim());
+      const email = encodeURIComponent(this.email.value.trim());
+      const message = encodeURIComponent(this.message.value.trim());
+
+      const mailToEmail = "nehal.nivaro@example.com"; // <<< REPLACE THIS EMAIL with your real email bro
+
+      const subject = encodeURIComponent(`New message from ${name} via NivaroStudio`);
+
+      const body = encodeURIComponent(
+        `Hey,\n\nYou received a new message from ${name} (${email}):\n\n${message}\n\n-- Sent via NivaroStudio contact form`
+      );
+
+      const mailtoLink = `mailto:${mailToEmail}?subject=${subject}&body=${body}`;
+
+      window.location.href = mailtoLink;
+    });
+  </script>
+</body>
+</html>
