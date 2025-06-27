@@ -157,16 +157,20 @@ ul li {
 
 .project {
   margin-bottom: 40px;
-  background: rgba(26, 29, 35, 0.7);
+  background: rgba(255, 255, 255, 0.05); /* light frosty tint */
   border-radius: 16px;
   padding: 20px;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project:hover {
   transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .project h3 {
