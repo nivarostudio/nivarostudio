@@ -7,12 +7,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     .logo-wrapper {
-  po.logo-wrapper {
-  position: absolute;
-  top: 40px; /* adjust as needed */
+  position: fixed;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10; /* safe value to sit above background but below floating UI */
+  z-index: 10;
   text-align: center;
 }
 
@@ -20,7 +19,7 @@
   width: 180px;
   height: auto;
   opacity: 0.95;
-  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.4)); /* ✅ Soft white glow */
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6)); /* ✨ Subtle white glow */
 }
     /* Reset & basics */
     * {
