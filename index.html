@@ -1,27 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NivaroStudio | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Unica+One&display=swap" rel="stylesheet">
-<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Genos:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
-  max-width: 100vw;
-  overflow-x: hidden;
+      max-width: 100vw;
+      overflow-x: hidden;
     }
     body {
-  font-family: 'Satoshi', sans-serif;
-  background: #0b0c10;
-  color: #e0e0e0;
-  overflow-x: hidden;
-  position: relative;
-    }
-
-h1 {
+      font-family: 'Satoshi', sans-serif;
+      background: #0b0c10;
+      color: #e0e0e0;
+      overflow-x: hidden;
+      position: relative;
+    }h1 {
   font-family: 'Genos', sans-serif;
   font-weight: 400;
   letter-spacing: 0.5px;
@@ -31,23 +28,24 @@ h2, h3 {
   font-family: 'Unica One', sans-serif;
   letter-spacing: 1px;
 }
-    
-    body::before {
+
+body::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: 1;
   pointer-events: none;
   background: 
-  radial-gradient(at 30% 20%, #4e4c5e, transparent 25%),
-  radial-gradient(at 70% 50%, #2b2a3d, transparent 25%),
-  radial-gradient(at 40% 80%, #1a1a2c, transparent 25%),
-  #0d0d0d;
+    radial-gradient(at 30% 20%, #4e4c5e, transparent 25%),
+    radial-gradient(at 70% 50%, #2b2a3d, transparent 25%),
+    radial-gradient(at 40% 80%, #1a1a2c, transparent 25%),
+    #0d0d0d;
   background-size: 200% 200%;
   opacity: 0.4;
   animation: meshShift 12s ease-in-out infinite alternate;
 }
-    body::after {
+
+body::after {
   content: "";
   position: fixed;
   inset: 0;
@@ -67,6 +65,7 @@ h2, h3 {
   animation-delay: var(--delay);
   z-index: 0;
 }
+
 @keyframes sparkle {
   0%   { opacity: 0.1; transform: scale(1); }
   50%  { opacity: 0.7; transform: scale(1.3); }
@@ -77,172 +76,176 @@ h2, h3 {
   0% { background-position: 0% 0%; }
   100% { background-position: 100% 100%; }
 }
-    
-  @keyframes neonFlicker {
+
+@keyframes neonFlicker {
   0%, 20%, 22%, 24%, 55%, 100% {
     filter: brightness(0) invert(1) drop-shadow(0 0 3px white) drop-shadow(0 0 10px white);
   }
   21%, 23%, 54% {
     filter: brightness(0) invert(1) drop-shadow(0 0 2px white) drop-shadow(0 0 5px white);
   }
-  }
-    @media (max-width: 600px) {
+}
+
+@media (max-width: 600px) {
   img {
     width: 180px !important;
   }
-    }
-    
-     header, section, footer {
-      position: relative;
-      z-index: 2;
-    }
+}
 
-    header {
-      padding: 10px 20px 40px;
-      text-align: center;
-    }
+header, section, footer {
+  position: relative;
+  z-index: 2;
+}
 
-    h1 {
-      font-size: 3.5rem;
-      color: #ffffff;
-      animation: fadeInDown 1s ease;
-    }
+header {
+  padding: 10px 20px 20px;
+  text-align: center;
+}
 
-    p.subtitle {
-      font-size: 1.1rem;
-      margin-top: 10px;
-      color: #9fa2a9;
-      animation: fadeInDown 1.2s ease;
-    }
+h1 {
+  font-size: 3.5rem;
+  color: #ffffff;
+  animation: fadeInDown 1s ease;
+}
 
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-      animation: fadeUp 1s ease;
-    }
+p.subtitle {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #9fa2a9;
+  animation: fadeInDown 1.2s ease;
+}
 
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #ced2db;
-      position: relative;
-    }
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeUp 1s ease;
+}
 
-    section h2::after {
-      content: "";
-      width: 60px;
-      height: 3px;
-      background: #72aee6;
-      display: block;
-      margin: 10px auto 0;
-      border-radius: 2px;
-    }
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ced2db;
+  position: relative;
+}
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
+section h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #72aee6;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
 
-    ul li {
-      padding: 5px 0;
-      color: #aeb3bb;
-    }
+ul {
+  list-style: none;
+  padding: 0;
+}
 
-    .project {
-      margin-bottom: 40px;
-      background: rgba(26, 29, 35, 0.7);
-      border-radius: 16px;
-      padding: 20px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+ul li {
+  padding: 5px 0;
+  color: #aeb3bb;
+}
 
-    .project:hover {
-      transform: translateY(-5px) scale(1.01);
-    }
+.project {
+  margin-bottom: 40px;
+  background: rgba(26, 29, 35, 0.7);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .project h3 {
-      font-size: 1.4rem;
-      color: #d1d7e0;
-      margin-bottom: 10px;
-    }
+.project:hover {
+  transform: translateY(-5px) scale(1.01);
+}
 
-    .project img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
+.project h3 {
+  font-size: 1.4rem;
+  color: #d1d7e0;
+  margin-bottom: 10px;
+}
 
-    .project p {
-      color: #aeb3bb;
-    }
+.project img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
 
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      color: #6d737c;
-      font-size: 0.9rem;
-    }
+.project p {
+  color: #aeb3bb;
+}
 
-    a {
-      color: #72aee6;
-      text-decoration: none;
-    }
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #6d737c;
+  font-size: 0.9rem;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+a {
+  color: #72aee6;
+  text-decoration: none;
+}
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+a:hover {
+  text-decoration: underline;
+}
 
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.contact-btn {
+  background: white;
+  color: black;
+  font-weight: bold;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-size: 1rem;
+  margin-top: 30px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+}
+
   </style>
 </head>
 <body>
-   <header>
-    <div style="text-align: center; margin-top: 0px; padding-top: 0px;">
-  <img src="images/logo.png" alt="NivaroStudio Logo" style="
-  width: 240px !important;
-  max-width: 80vw;
-  height: auto;
-  margin-top: -10px;
-  padding-top: 0px;
-  filter: brightness(0) invert(1) drop-shadow(0 0 3px white) drop-shadow(0 0 9px white);
-  animation: neonFlicker 1.2s infinite;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-">
-</div>
+  <header>
+    <div style="text-align: center;">
+      <img src="images/logo.png" alt="NivaroStudio Logo" style="
+        width: 240px !important;
+        max-width: 80vw;
+        height: auto;
+        margin-top: -10px;
+        filter: brightness(0) invert(1) drop-shadow(0 0 3px white) drop-shadow(0 0 9px white);
+        animation: neonFlicker 1.2s infinite;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      ">
+    </div>
     <h1>nivaro studio</h1>
     <p class="subtitle">Creative & melancholic brand identity design</p>
-  </header>
-
-  <section id="about">
+  </header>  <section id="about">
     <h2>About Me</h2>
     <p>I'm Nehal, the mind behind NivaroStudio — where strategy meets art. I design thoughtful, minimal, and emotionally-resonant brand identities for creators, startups, and solo founders. Currently focused on freelance design and growing as a brand specialist.</p>
-  </section>
-
-  <section id="services">
-    <h2>Services</h2>
-    <ul>
-      <li>Logo & Visual Identity Design</li>
-      <li>Brand Guidelines & Typography Systems</li>
-      <li>Instagram Kits & Social Post Templates</li>
-      <li>Business Cards & Brand Collateral</li>
-    </ul>
-  </section>
-
-  <section id="projects">
+    <a href="#contact" class="contact-btn">CONTACT ME</a>
+  </section>  <section id="projects">
     <h2>Projects</h2>
     <div class="project">
       <img src="images/flo.jpg" alt="FLO Skincare Project">
@@ -259,9 +262,7 @@ h2, h3 {
       <h3>Culture Kitchen</h3>
       <p>Bold and earthy identity for a food startup. Handcrafted logotype, social kits, and packaging mockups.</p>
     </div>
-  </section>
-
-  <section id="contact">
+  </section>  <section id="contact">
     <h2>Contact</h2>
     <p>Let's build something timeless. Reach out for collaborations or commissions:</p>
     <ul>
@@ -269,36 +270,32 @@ h2, h3 {
       <li>Instagram: <a href="https://instagram.com/nivarostudio" target="_blank">@nivarostudio</a></li>
       <li>Telegram: <a href="https://t.me/nivarostudio" target="_blank">@nivarostudio</a></li>
     </ul>
-  </section>
-
-  <footer>
+  </section>  <footer>
     © 2025 NivaroStudio. Designed with intention.
-  </footer>
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const starCount = 150;
-    const body = document.body;
-    const totalHeight = Math.max(
-      body.scrollHeight, body.offsetHeight,
-      document.documentElement.clientHeight,
-      document.documentElement.scrollHeight,
-      document.documentElement.offsetHeight
-    );
+  </footer>  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const starCount = 150;
+      const body = document.body;
+      const totalHeight = Math.max(
+        body.scrollHeight, body.offsetHeight,
+        document.documentElement.clientHeight,
+        document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight
+      );
 
-    for (let i = 0; i < starCount; i++) {
-      const star = document.createElement("div");
-      star.classList.add("star");
-      star.style.top = `${Math.random() * totalHeight}px`;
-      star.style.left = `${Math.random() * window.innerWidth}px`;
+      for (let i = 0; i < starCount; i++) {
+        const star = document.createElement("div");
+        star.classList.add("star");
+        star.style.top = `${Math.random() * totalHeight}px`;
+        star.style.left = `${Math.random() * window.innerWidth}px`;
 
-      const delay = (Math.random() * 3).toFixed(2) + "s"; // up to 3s delay
-      const duration = (1 + Math.random() * 2).toFixed(2) + "s"; // between 1s–3s
-      star.style.setProperty('--delay', delay);
-      star.style.setProperty('--dur', duration);
+        const delay = (Math.random() * 3).toFixed(2) + "s";
+        const duration = (1 + Math.random() * 2).toFixed(2) + "s";
+        star.style.setProperty('--delay', delay);
+        star.style.setProperty('--dur', duration);
 
-      body.appendChild(star);
-    }
-  });
-</script>
-</body>
+        body.appendChild(star);
+      }
+    });
+  </script></body>
 </html>
