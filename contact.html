@@ -80,16 +80,19 @@
     }
 
     .contact-wrapper {
-      background: rgba(25, 25, 25, 0.85);
-      max-width: 400px;
-      width: 100%;
-      padding: 40px 35px;
-      border-radius: 14px;
-      box-shadow:
-        inset 0 0 60px 20px rgba(70, 70, 70, 0.15),
-        0 10px 30px rgba(0,0,0,0.7);
-      position: relative;
-      z-index: 1;
+  background: rgba(25, 25, 25, 0.25); /* more transparent for frost */
+  max-width: 400px;
+  width: 100%;
+  padding: 40px 35px;
+  border-radius: 14px;
+  box-shadow:
+    inset 0 0 60px 20px rgba(70, 70, 70, 0.15),
+    0 10px 30px rgba(0,0,0,0.5);
+  backdrop-filter: blur(18px);       /* 💎 THE FROST */
+  -webkit-backdrop-filter: blur(18px); /* for Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* subtle border for glass edge */
+  position: relative;
+  z-index: 1;
     }
 
     h1 {
