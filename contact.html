@@ -7,21 +7,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     .logo-wrapper {
-  position: fixed;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  text-align: center;
-}
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      text-align: center;
+    }
 
-.logo-wrapper img {
-  width: 180px;
-  height: auto;
-  opacity: 0.95;
-  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6)); /* ✨ Subtle white glow */
-}
-    /* Reset & basics */
+    .logo-wrapper img {
+      width: 180px;
+      height: auto;
+      opacity: 0.95;
+      filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6)); /* ✨ Subtle white glow */
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -33,13 +33,11 @@
       color: #ddd;
       display: flex;
       justify-content: center;
-      align-items: center;
       height: 100vh;
       padding: 20px;
       overflow: hidden;
     }
 
-    /* 🔮 Floating Gradient Background */
     .gradient-bg {
       position: fixed;
       top: 0;
@@ -93,22 +91,22 @@
         transform: translate(50px, -30px) scale(1.1);
       }
     }
-    
+
     .contact-wrapper {
-  background: rgba(25, 25, 25, 0.25); /* more transparent for frost */
-  margin-top: 100px;
-  max-width: 400px;
-  width: 100%;
-  padding: 40px 35px;
-  border-radius: 14px;
-  box-shadow:
-    inset 0 0 60px 20px rgba(70, 70, 70, 0.15),
-    0 10px 30px rgba(0,0,0,0.5);
-  backdrop-filter: blur(18px);       /* 💎 THE FROST */
-  -webkit-backdrop-filter: blur(18px); /* for Safari support */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* subtle border for glass edge */
-  position: relative;
-  z-index: 1;
+      background: rgba(25, 25, 25, 0.25);
+      margin-top: 100px;
+      max-width: 400px;
+      width: 100%;
+      padding: 40px 35px;
+      border-radius: 14px;
+      box-shadow:
+        inset 0 0 60px 20px rgba(70, 70, 70, 0.15),
+        0 10px 30px rgba(0,0,0,0.5);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
@@ -191,7 +189,6 @@
   </style>
 </head>
 <body>
-  <!-- ✨ Mesh Gradient Background -->
   <div class="gradient-bg">
     <div class="blob"></div>
     <div class="blob"></div>
@@ -199,11 +196,11 @@
   </div>
 
   <div class="logo-wrapper">
-  <a href="index.html">
-    <img src="images/logo.png" alt="NivaroStudio Logo" />
-  </a>
-</div>
-  
+    <a href="index.html">
+      <img src="images/logo.png" alt="NivaroStudio Logo" />
+    </a>
+  </div>
+
   <div class="contact-wrapper">
     <h1>Contact Us!</h1>
     <p>Let's create something timeless together.</p>
@@ -223,23 +220,22 @@
   </div>
 
   <script>
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
 
-    const name = this.name.value.trim();
-    const email = this.email.value.trim();
-    const message = this.message.value.trim();
+      const name = this.name.value.trim();
+      const email = this.email.value.trim();
+      const message = this.message.value.trim();
 
-    const subject = encodeURIComponent(`Message from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`
-    );
+      const subject = encodeURIComponent(`Message from ${name}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`
+      );
 
-    const mailToEmail = "nivarostudios@gmail.com"; // change if needed
-
-    const mailtoLink = `mailto:${mailToEmail}?subject=${subject}&body=${body}`;
-    window.location.href = mailtoLink;
-  });
-</script>
+      const mailToEmail = "nivarostudios@gmail.com";
+      const mailtoLink = `mailto:${mailToEmail}?subject=${subject}&body=${body}`;
+      window.location.href = mailtoLink;
+    });
+  </script>
 </body>
 </html>
