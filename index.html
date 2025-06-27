@@ -89,6 +89,17 @@ body::after {
     filter: brightness(0) invert(1) drop-shadow(0 0 2px white) drop-shadow(0 0 5px white);
   }
 }
+    
+    @keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+    }
 
 @media (max-width: 600px) {
   img {
@@ -210,6 +221,9 @@ a:hover {
   margin-top: 30px;
   display: inline-block;
   transition: transform 0.3s ease;
+  animation: popIn 1s ease forwards;
+  animation-delay: 1.4s;
+  opacity: 0; /* So it fades in with the animation */
 }
 
 .contact-btn:hover {
