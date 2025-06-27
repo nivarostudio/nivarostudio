@@ -6,6 +6,21 @@
   <title>Contact | NivaroStudio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    .logo-wrapper {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  text-align: center;
+}
+
+.logo-wrapper img {
+  width: 120px;
+  height: auto;
+  opacity: 0.95;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+}
     /* Reset & basics */
     * {
       box-sizing: border-box;
@@ -78,6 +93,11 @@
         transform: translate(50px, -30px) scale(1.1);
       }
     }
+    <div class="logo-wrapper">
+  <a href="index.html">
+    <img src="images/logo.png" alt="NivaroStudio Logo" />
+  </a>
+</div>
 
     .contact-wrapper {
   background: rgba(25, 25, 25, 0.25); /* more transparent for frost */
