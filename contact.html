@@ -6,9 +6,10 @@
   <title>Contact | NivaroStudio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    /* 🟢 Logo Position (No Glow) */
     .logo-wrapper {
       position: fixed;
-      top: 0px;
+      top: 10px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 10;
@@ -19,24 +20,28 @@
       width: 180px;
       height: auto;
       opacity: 0.95;
-      filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6)); /* ✨ Subtle white glow */
+      display: block;
     }
 
+    /* Reset & basics */
     * {
       box-sizing: border-box;
     }
 
     body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #1f1f1f;
-  color: #ddd;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-}
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #1f1f1f;
+      color: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+      overflow: hidden;
+    }
 
+    /* 🔮 Floating Gradient Background */
     .gradient-bg {
       position: fixed;
       top: 0;
@@ -90,7 +95,7 @@
         transform: translate(50px, -30px) scale(1.1);
       }
     }
-
+    
     .contact-wrapper {
       background: rgba(25, 25, 25, 0.25);
       margin-top: 100px;
@@ -188,18 +193,20 @@
   </style>
 </head>
 <body>
+  <!-- ✨ Mesh Gradient Background -->
   <div class="gradient-bg">
     <div class="blob"></div>
     <div class="blob"></div>
     <div class="blob"></div>
   </div>
 
+  <!-- 🔝 Logo (no glow) -->
   <div class="logo-wrapper">
     <a href="index.html">
       <img src="images/logo.png" alt="NivaroStudio Logo" />
     </a>
   </div>
-
+  
   <div class="contact-wrapper">
     <h1>Contact Us!</h1>
     <p>Let's create something timeless together.</p>
@@ -232,6 +239,7 @@
       );
 
       const mailToEmail = "nivarostudios@gmail.com";
+
       const mailtoLink = `mailto:${mailToEmail}?subject=${subject}&body=${body}`;
       window.location.href = mailtoLink;
     });
