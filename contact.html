@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     .logo-wrapper {
-      position: absolute;
+      position: fixed;
       top: 20px;
       left: 50%;
       transform: translateX(-50%);
@@ -25,17 +25,16 @@
     }
 
     body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #1f1f1f;
-      color: #ddd;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      padding: 20px;
-      overflow: hidden;
-    }
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #1f1f1f;
+  color: #ddd;
+  padding: 100px 20px 40px; /* Top padding gives room for logo */
+  display: flex;
+  justify-content: center;
+  /* remove align-items & height: 100vh */
+  overflow-x: hidden;
+}
 
     .gradient-bg {
       position: fixed;
@@ -92,20 +91,20 @@
     }
 
     .contact-wrapper {
-      background: rgba(25, 25, 25, 0.25);
-      margin-top: 90px;
-      max-width: 400px;
-      width: 100%;
-      padding: 40px 35px;
-      border-radius: 14px;
-      box-shadow:
-        inset 0 0 60px 20px rgba(70, 70, 70, 0.15),
-        0 10px 30px rgba(0,0,0,0.5);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      position: relative;
-      z-index: 1;
+  margin-top: 0; /* Don’t need big top margin now */
+  max-width: 400px;
+  width: 100%;
+  padding: 40px 35px;
+  background: rgba(25, 25, 25, 0.25);
+  border-radius: 14px;
+  box-shadow:
+    inset 0 0 60px 20px rgba(70, 70, 70, 0.15),
+    0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
     }
 
     h1 {
